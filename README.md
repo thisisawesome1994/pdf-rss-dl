@@ -24,20 +24,22 @@ pip install fpdf
 
 ## Usage
 1. Clone the repository:
-   ```git clone https://github.com/yourusername/pdf-rss-downloader.git
-      cd pdf-rss-downloader```
+```
+git clone https://github.com/yourusername/pdf-rss-downloader.git
+cd pdf-rss-downloader
+```
 2. Prepare the RSS Feeds:
    
     -  Create a rss_feeds.txt file in the root directory of the project.
     -  Add the RSS feed URLs, one per line. Example:
-   ```
-  https://example.com/rss
-  https://anotherexample.com/feed
-  ```
+```
+https://example.com/rss
+https://anotherexample.com/feed
+```
 3. Run the Script:
-  ```
-  python app.py
-  ```
+```
+python app.py
+```
 4. Output:
   
   -  PDFs will be saved in the downloaded_pdfs directory, organized by feed title and year of publication.
