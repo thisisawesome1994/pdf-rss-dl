@@ -19,7 +19,7 @@ This Python script downloads and exports RSS feed entries into PDF files. It che
 You can install the required dependencies using pip:
 
 ```bash
-pip install fpdf
+pip install fpdf feedparser
 ```
 
 ## Usage
