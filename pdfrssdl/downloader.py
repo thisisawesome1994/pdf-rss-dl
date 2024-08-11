@@ -86,19 +86,23 @@ def export_entry_to_pdf(entry, feed_title):
     pdf.set_font("Arial", size=12)
     
     # Function to add UTF-8 text
-    def add_utf8_text(pdf, text):
-        pdf.multi_cell(0, 10, text.encode('latin-1', 'replace').decode('latin-1'))
+def add_utf8_text(pdf, text):
+    pdf.multi_cell(0, 10, text.encode('latin-1', 'replace').decode('latin-1'))
 
     # Add title and other information to the PDF
     add_utf8_text(pdf, f"Title: {entry.title}")
     add_utf8_text(pdf, f"Link: {entry.link}")
     add_utf8_text(pdf, f"Published: {entry.published}")
-    add_utf8_text(pdf, f"Description: {entry.description}")
+    
+    # Check if the description exists and add it if present
+    description = getattr(entry, 'description', "No description available")
+    add_utf8_text(pdf, f"Description: {description}")
 
     # Save the PDF
     pdf.output(pdf_filename)
     print(f"Exported: {entry.title} to {pdf_filename}")
     save_downloaded_entry(entry.id)
+
 
 # Remaining part of your script remains unchanged
 

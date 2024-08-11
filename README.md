@@ -25,7 +25,7 @@ pip install fpdf feedparser
 ## Usage
 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/pdf-rss-downloader.git
+git clone https://github.com/thisisawesome1994/pdf-rss-downloader.git
 cd pdf-rss-downloader
 ```
 2. Prepare the RSS Feeds:
